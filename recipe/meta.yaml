@@ -19,10 +19,14 @@ requirements:
   host:
     - pip
     - python >=3.6
+    - poetry
+    - tox
   run:
     - prettytable
     - python >=3.6
     - redis-py
+    - poetry
+    - tox
 
 test:
   imports:
