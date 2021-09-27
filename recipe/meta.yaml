@@ -21,12 +21,14 @@ requirements:
     - python >=3.6
     - poetry
     - tox
+    - hiredis
   run:
     - prettytable
     - python >=3.6
     - redis-py
     - poetry
     - tox
+    + hiredis
 
 test:
   imports:
