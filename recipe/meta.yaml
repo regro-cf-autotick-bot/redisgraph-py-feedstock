@@ -28,7 +28,7 @@ requirements:
     - redis-py
     - poetry
     - tox
-    + hiredis
+    - hiredis
 
 test:
   imports:
