@@ -1,5 +1,5 @@
 {% set name = "redisgraph" %}
-{% set version = "2.4.0" %}
+{% set version = "2.4.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/redisgraph-{{ version }}.tar.gz
-  sha256: 2f82633f99e832461e5f156cfb7d8e1ff3f2df8b1962b93b1a1051b538a09b90
+  sha256: b67de1456ca19be06aee1430e07d8e070b85688d1e729406d6c24f13ce1e8e94
 
 build:
   number: 0
@@ -21,12 +21,14 @@ requirements:
     - python >=3.6
     - poetry
     - tox
+    - hiredis
   run:
     - prettytable
     - python >=3.6
     - redis-py
     - poetry
     - tox
+    - hiredis
 
 test:
   imports:
