@@ -1,5 +1,5 @@
 {% set name = "redisgraph" %}
-{% set version = "2.4.1" %}
+{% set version = "2.4.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/redisgraph-{{ version }}.tar.gz
-  sha256: b67de1456ca19be06aee1430e07d8e070b85688d1e729406d6c24f13ce1e8e94
+  sha256: d35d8373b51efabdc263fc4d72a154efc17682e7e3e6fb0cc233a8200e8583eb
 
 build:
   number: 0
