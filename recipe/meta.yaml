@@ -7,24 +7,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/redisgraph-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/redisgraph-{{ version }}.tar.gz
   sha256: b67de1456ca19be06aee1430e07d8e070b85688d1e729406d6c24f13ce1e8e94
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - poetry
     - tox
     - hiredis
   run:
     - prettytable
-    - python >=3.6
+    - python >={{ python_min }}
     - redis-py
     - poetry
     - tox
@@ -38,6 +38,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/RedisGraph/redisgraph-py
